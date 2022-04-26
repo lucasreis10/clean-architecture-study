@@ -5,7 +5,7 @@
 - Implementar uma arquitetura baseada em clean architecture 
 - Meditar sobre principais trade-off
 - Meditar sobre os ganhos/pontos positivos
-- Documentar todas(ou tentar) todas as decisões no README
+- Documentar todas as decisões (ou tentar) no README
 - A implementação do projeto deve ser "by the book"
 
 
