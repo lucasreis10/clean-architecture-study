@@ -1,4 +1,4 @@
-package com.lucasreis10.arq.ref.domain.job
+package com.lucasreis10.arq.ref.usecase.job
 
 import com.lucasreis10.arq.ref.domain.job.entity.Job
 

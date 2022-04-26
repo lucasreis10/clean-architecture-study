@@ -1,7 +1,7 @@
 package com.lucasreis10.arq.ref.infrastructure.job.repository.dynamodb
 
 import com.lucasreis10.arq.ref.domain.job.entity.Job
-import com.lucasreis10.arq.ref.domain.job.JobRepositoryInterface
+import com.lucasreis10.arq.ref.usecase.job.JobRepositoryInterface
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient
 import software.amazon.awssdk.enhanced.dynamodb.Key
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema
