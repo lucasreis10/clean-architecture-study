@@ -4,6 +4,7 @@ import com.lucasreis10.arq.ref.domain.job.JobRepositoryInterface
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito
+import org.mockito.Mockito.anyString
 
 
 class FetchJobTest {
@@ -13,6 +14,7 @@ class FetchJobTest {
     @Test
     fun fetch() {
         // setup:
+        Mockito.`when`(repository.fetchJob(anyString(), anyString())).thenReturn(FetchJobTestHelper.job())
         val input = FetchJobTestHelper.inputFindJobDto(job = "client-name-932312")
         // execute:
         val output = FetchJobUseCase(repository).execute(input)
