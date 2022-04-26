@@ -6,17 +6,19 @@
 - Meditar sobre principais trade-off
 - Meditar sobre os ganhos/pontos positivos
 - Documentar todas(ou tentar) todas as decisões no README
+- A implementação do projeto deve ser "by the book"
 
 
 ## Camadas
 
 ### Domain
 
-Responsavel por todas as regras de negocio
+Responsável por todas as regras de negocio
 
 ### Use cases
 
 Descreve a intenção do usuário por exemplo: criar usuário, enviar e-mail, remover item do carrinho de compras 
+
 
 ### Infrastructure
 
