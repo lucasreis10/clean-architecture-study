@@ -1,4 +1,4 @@
-package com.lucasreis10.arq.ref.infrastructure.aws
+package com.lucasreis10.arq.ref.infrastructure.config.aws.dynamodb
 
 import org.eclipse.microprofile.config.inject.ConfigProperty
 import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider

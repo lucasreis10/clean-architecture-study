@@ -25,7 +25,7 @@ class JobModel(
     val updatedBy: String,
     val approvedBy: String
 ) {
-    fun toJob(): Job? {
+    fun toJob(): Job {
         return Job(this.gsi1pk,
                 this.gsi1sk,
                 this.gsi2sk,
