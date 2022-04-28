@@ -29,4 +29,4 @@ Composta por frameworks e ferramentas como o Banco de Dados, o Web Framework, et
 
 
 
-![MarineGEO circle logo](CleanArchitecture.jpg)
+![MarineGEO circle logo](images/CleanArchitecture.jpg)

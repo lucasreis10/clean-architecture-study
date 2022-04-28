@@ -5,8 +5,8 @@ import java.util.*
 
 object FetchJobTestHelper {
 
-    fun inputFindJobDto(pk: String = "dummy", job: String = "dummy"): InputFindJobDto {
-      return InputFindJobDto(pk, job)
+    fun inputFindJobDto(pk: String = "dummy", job: String = "dummy"): InputFetchJobDto {
+      return InputFetchJobDto(pk, job)
     }
 
     fun job(): Job {

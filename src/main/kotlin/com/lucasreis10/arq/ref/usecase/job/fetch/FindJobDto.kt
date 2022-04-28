@@ -2,12 +2,12 @@ package com.lucasreis10.arq.ref.usecase.job.fetch
 
 import java.util.*
 
-data class InputFindJobDto(
+data class InputFetchJobDto(
     val pk: String,
     val job: String,
 )
 
-data class  OutputFindJobDto(
+data class  OutputFetchJobDto(
     val gsi1pk: String,
     val gsi1sk: Date,
     val gsi2sk: Date,
