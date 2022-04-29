@@ -8,6 +8,7 @@ class FetchJobUseCase(private val jobRepository: JobRepositoryInterface) {
     fun execute(input: InputFetchJobDto): OutputFetchJobDto? {
         val job = jobRepository.fetchJob(input.pk, input.job)
 
+
         return toOutput(job)
     }
 

@@ -18,6 +18,4 @@ class Job constructor(
     val approvedBy: String
 ) {
 
-
-
 }

@@ -1,15 +1,19 @@
-package com.lucasreis10.arq.ref.infrastructure.job.lambda
+package com.lucasreis10.arq.ref.infrastructure.job.entrypoint.lambda
 
 import com.amazonaws.services.lambda.runtime.Context
 import com.amazonaws.services.lambda.runtime.RequestHandler
 import com.lucasreis10.arq.ref.usecase.job.fetch.FetchJobUseCase
 import com.lucasreis10.arq.ref.usecase.job.fetch.InputFetchJobDto
-import java.util.*
+import javax.enterprise.inject.Default
+import javax.inject.Inject
+import javax.inject.Named
 
-class JobLambda(
-    private val fetchJobUseCase: FetchJobUseCase
-    ): RequestHandler<InputFetchJobLambdaDto, OutputFetchJobLambdaDto> {
+@Named("JobLambda")
+class JobLambda: RequestHandler<InputFetchJobLambdaDto, Any> {
 
+    @Inject
+    @field: Default
+    private lateinit var fetchJobUseCase: FetchJobUseCase
 
     override fun handleRequest(input: InputFetchJobLambdaDto?, context: Context?): OutputFetchJobLambdaDto {
         val inputUseCase = InputFetchJobDto(input!!.pk, input.job)
@@ -24,16 +28,3 @@ class JobLambda(
         )
     }
 }
-
-
-data class InputFetchJobLambdaDto(
-    val pk: String,
-    val job: String,
-)
-
-data class OutputFetchJobLambdaDto(
-    val image: String,
-    val images: List<String>,
-    val gsi1pk: String,
-    val gsi1sk: Date
-)
