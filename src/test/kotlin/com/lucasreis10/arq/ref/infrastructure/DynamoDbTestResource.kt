@@ -1,9 +1,10 @@
 package com.lucasreis10.arq.ref.infrastructure
 
+import io.quarkus.test.common.QuarkusTestResourceLifecycleManager
 import org.testcontainers.containers.GenericContainer
 import org.testcontainers.utility.DockerImageName
 
-class DynamoDbTestResource: QuarkusTestResource {
+class DynamoDbTestResource: QuarkusTestResourceLifecycleManager {
 
     private val dynamoDb = GenericContainer<Nothing>(
         DockerImageName
