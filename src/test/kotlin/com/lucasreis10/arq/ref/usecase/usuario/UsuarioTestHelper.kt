@@ -1,6 +1,5 @@
 package com.lucasreis10.arq.ref.usecase.usuario
 
-import com.lucasreis10.arq.ref.domain.emprestimo.entity.Emprestimo
 import com.lucasreis10.arq.ref.domain.usuario.UsuarioRepository
 import com.lucasreis10.arq.ref.domain.usuario.entity.Usuario
 import com.lucasreis10.arq.ref.usecase.usuario.obter.OutputUsuarioDto
