@@ -12,9 +12,13 @@ class Usuario(
     val emprestimos: List<Emprestimo>,
 ) {
 
+    init {
+        validar()
+    }
+
     fun validar() {
         if(this.matricula.length <= 3) {
-            DominioException("Matricula deve conter mais de 3 caracters")
+            throw DominioException("Matricula deve conter mais de 3 caracters")
         }
     }
 
