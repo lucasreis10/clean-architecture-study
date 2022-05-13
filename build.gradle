@@ -2,11 +2,11 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.6.10'
     id 'org.jetbrains.kotlin.plugin.allopen' version '1.6.10'
     id 'io.quarkus'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.10'
 }
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 dependencies {
