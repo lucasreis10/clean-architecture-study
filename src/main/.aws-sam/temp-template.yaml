@@ -4,7 +4,7 @@ Resources:
     Properties:
       Timeout: 300
       MemorySize: 128
-      Handler: com.lucasreis10.arq.ref.infrastructure.usuario.entrypoint.lambda.ObterUsuarioHandle
+      Handler: com.lucasreis10.arq.ref.infrastructure.usuario.entrypoint.lambda.UsuarioLambda
       CodeUri: /home/lucas.reis/dev/github-pessoal/arq-ref
       Runtime: java11
       Architectures:

@@ -8,22 +8,27 @@ Globals:
     Timeout: 20
 
 Resources:
+  ApiGatewayApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: API Lambda Quarkus
+      StageName: dev
+
   ObterUsuarios:
     Type: AWS::Serverless::Function
     Properties:
-      PackageType: Image
-      Architectures:
-        - x86_64
-      Environment:
-        Variables:
-          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+      Handler: com.lucasreis10.arq.ref.infrastructure.usuario.entrypoint.lambda.UsuarioLambda::handleRequest
+      Runtime: java11
+      MemorySize: 512
+      Timeout: 30
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: Users
       Events:
-        Api:
+        ObterTodosUsuarios:
           Type: Api
           Properties:
-            Path: /usuario
-            Method: get
-    Metadata:
-      DockerTag: java11-gradle-v1
-      DockerContext: ./HelloWorldFunction
-      Dockerfile: Dockerfile
+            RestApiId: !Ref ApiGatewayApi
+            Path: /usuarios
+            Method: GET
+
