@@ -28,5 +28,20 @@ Composta por frameworks e ferramentas como o Banco de Dados, o Web Framework, et
 
 
 
-
 ![MarineGEO circle logo](images/CleanArchitecture.jpg)
+
+
+
+## Testar com SAM local
+
+Inicie DynamoDB local 
+
+```shell
+TODO configurar dynamodb-local 
+```
+
+Iniciar API local 
+
+```shell
+sam local start-api --template sam.jvm.yaml
+```
