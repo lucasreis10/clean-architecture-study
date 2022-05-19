@@ -16,6 +16,8 @@ val quarkusPlatformVersion: String by project
 dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:quarkus-amazon-services-bom:${quarkusPlatformVersion}"))
+    implementation(project(":domain"))
+    implementation(project(":application"))
     implementation("io.quarkus:quarkus-amazon-lambda")
     implementation("io.quarkus:quarkus-kotlin")
     implementation("io.quarkus:quarkus-amazon-lambda-rest")

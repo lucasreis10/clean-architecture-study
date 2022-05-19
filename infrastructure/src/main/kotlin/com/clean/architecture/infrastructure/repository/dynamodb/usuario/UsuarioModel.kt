@@ -1,6 +1,6 @@
 package com.clean.architecture.infrastructure.repository.dynamodb.usuario
 
-import com.clean.architecture.domain.infrastructure.emprestimo.dynamodb.EmprestimoModel
+import com.clean.architecture.infrastructure.repository.dynamodb.emprestimo.EmprestimoModel
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey
@@ -15,7 +15,7 @@ class UsuarioModel(
     val email: String,
     val endereco: String,
     val telefone: String,
-    val emprestimos: List<com.clean.architecture.domain.infrastructure.emprestimo.dynamodb.EmprestimoModel>
+    val emprestimos: List<EmprestimoModel>
 ) {
 
 }

@@ -1,15 +1,15 @@
 package com.clean.architecture.infrastructure.repository.dynamodb.usuario
 
-import com.clean.architecture.domain.domain.usuario.entity.Usuario
-import com.clean.architecture.domain.infrastructure.emprestimo.dynamodb.EmprestimoModelConverter
+import com.clean.architecture.domain.usuario.Usuario
+import com.clean.architecture.infrastructure.repository.dynamodb.emprestimo.EmprestimoModelConverter
 import javax.enterprise.context.ApplicationScoped
 
 @ApplicationScoped
-class UsuarioModelConverter(private val emprestimoModelConverter: com.clean.architecture.domain.infrastructure.emprestimo.dynamodb.EmprestimoModelConverter) {
+class UsuarioModelConverter(private val emprestimoModelConverter: EmprestimoModelConverter) {
 
-    fun converterParaEntidade(usuarioModel: UsuarioModel?): com.clean.architecture.domain.domain.usuario.entity.Usuario? {
+    fun converterParaEntidade(usuarioModel: UsuarioModel?): Usuario? {
         return if(usuarioModel != null)
-            com.clean.architecture.domain.domain.usuario.entity.Usuario(
+            Usuario(
                 usuarioModel.matricula,
                 usuarioModel.nome,
                 usuarioModel.email,
