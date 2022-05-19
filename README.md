@@ -8,7 +8,7 @@
 ## Camadas
 ### Domain
 Responsável por todas as regras de negocio
-### Use cases
+### Application
 Descreve a intenção do usuário por exemplo: criar usuário, enviar e-mail, remover item do carrinho de compras
 ### Infrastructure
 Composta por frameworks e ferramentas como o Banco de Dados, o Web Framework, etc.
@@ -28,6 +28,6 @@ sam local start-api --template sam.jvm.yaml
 ## Histórico de Definições
 
 - Mudar estrutura do projeto de pacotes para modulos, vantagens:
-    - Separação de responsabilidade mais rígida
-    - Evitar que camadas de alto nível tenham contato com tecnologias.
-    - Evitar que camadas de alto nível acessem camadas de baixo nível. 
+    - Separa responsabilidades de forma mais organizada, contribui para "screaming architecture".
+    - Evita que camadas de alto nível tenham contato com tecnologias e acessem camadas de baixo nível.
+    - Isola problemas de configuração de framework na camada de mais baixo nível.
