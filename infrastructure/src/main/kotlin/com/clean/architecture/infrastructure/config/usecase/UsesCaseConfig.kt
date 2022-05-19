@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.config.usecase
+package com.clean.architecture.infrastructure.config.usecase
 
 import com.lucasreis10.arq.ref.infrastructure.usuario.repository.dynamodb.DynamoDbRepositoryUsuario
 import com.lucasreis10.arq.ref.usecase.usuario.obter.ObterUsuario

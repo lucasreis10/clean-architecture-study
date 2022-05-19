@@ -1,4 +1,4 @@
-package com.clean.architecture.infrastructure.repository
+package com.clean.architecture.infrastructure.repository.dynamodb.usuario
 
 import com.clean.architecture.domain.infrastructure.emprestimo.dynamodb.EmprestimoModel
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean

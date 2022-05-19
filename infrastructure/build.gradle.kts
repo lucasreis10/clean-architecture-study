@@ -23,6 +23,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
     implementation("software.amazon.awssdk:dynamodb-enhanced:2.17.192")
+    testImplementation("org.testcontainers:testcontainers:1.17.1")
     testImplementation("io.quarkus:quarkus-junit5")
 }
 

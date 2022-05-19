@@ -1,4 +1,4 @@
-package com.clean.architecture.infrastructure.repository
+package com.clean.architecture.infrastructure.repository.dynamodb.usuario
 
 import software.amazon.awssdk.enhanced.dynamodb.Key
 

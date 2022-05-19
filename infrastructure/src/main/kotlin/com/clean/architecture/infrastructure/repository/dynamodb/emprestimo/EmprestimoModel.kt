@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.emprestimo.dynamodb
+package com.clean.architecture.infrastructure.repository.dynamodb.emprestimo
 
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean
 import java.util.*

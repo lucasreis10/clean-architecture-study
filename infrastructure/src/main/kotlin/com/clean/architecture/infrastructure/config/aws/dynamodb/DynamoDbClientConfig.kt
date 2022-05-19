@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.config.aws.dynamodb
+package com.clean.architecture.infrastructure.config.aws.dynamodb
 
 import org.eclipse.microprofile.config.inject.ConfigProperty
 import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider
@@ -7,7 +7,7 @@ import software.amazon.awssdk.regions.Region
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient
 import java.net.URI
 import javax.enterprise.context.ApplicationScoped
-import javax.ws.rs.Produces
+import javax.enterprise.inject.Produces
 
 class DynamoDbClientConfig  (
     @ConfigProperty(name = "quarkus.dynamodb.aws.region")
