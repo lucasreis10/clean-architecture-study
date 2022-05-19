@@ -45,3 +45,13 @@ Iniciar API local
 ```shell
 sam local start-api --template sam.jvm.yaml
 ```
+
+
+
+  ## Histórico de Definições
+    
+- Mudar estrutura do projeto de pacotes para modulos, vantagens:
+  - Separação de responsabilidade mais rígida 
+  - Evitar que camadas de alto nível tenham contato com tecnologias.
+  - Evitar que camadas de alto nível acessem camadas de baixo nível. 
+       
