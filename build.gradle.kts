@@ -14,18 +14,7 @@ val quarkusPlatformArtifactId: String by project
 val quarkusPlatformVersion: String by project
 
 dependencies {
-    implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
-    implementation(enforcedPlatform("${quarkusPlatformGroupId}:quarkus-amazon-services-bom:${quarkusPlatformVersion}"))
-    implementation("io.quarkus:quarkus-amazon-lambda")
-    implementation("io.quarkus:quarkus-kotlin")
-    implementation("io.quarkiverse.amazonservices:quarkus-amazon-dynamodb")
-    implementation("io.quarkus:quarkus-amazon-lambda-rest")
-    implementation("io.quarkus:quarkus-resteasy-reactive-kotlin-serialization")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("io.quarkus:quarkus-arc")
-    implementation("io.quarkus:quarkus-resteasy-reactive")
-    testImplementation("io.quarkus:quarkus-junit5")
-    testImplementation("io.rest-assured:rest-assured")
+
 }
 
 group = "com.clean.architecture"
