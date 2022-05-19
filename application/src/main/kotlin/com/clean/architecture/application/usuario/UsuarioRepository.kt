@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.usuario
+package com.clean.architecture.application.usuario
 
 interface UsuarioRepository {
 

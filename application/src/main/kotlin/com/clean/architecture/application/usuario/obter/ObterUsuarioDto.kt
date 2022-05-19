@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.usecase.usuario.obter
+package com.clean.architecture.application.usuario.obter
 
 data class InputObterUsuarioDto(
     val matricula: String,
