@@ -1,6 +1,7 @@
 package com.clean.architecture.application.usuario
 
 import com.clean.architecture.application.usuario.obter.OutputUsuarioDto
+import com.clean.architecture.domain.usuario.Usuario
 
 
 class UsuarioConverter {

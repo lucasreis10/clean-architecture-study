@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test
 
 class ObterUsuarioTest {
 
-    private val usuarioRepositoryMock = UsuarioRepositoryMock()
 
     @Test
     fun obterUsuario() {
         // setup:
+        val usuarioRepositoryMock = UsuarioRepositoryMock()
         val input = InputObterUsuarioDto("dummy", "dummy")
         // execute:
         val outputUsuario = ObterUsuario(usuarioRepositoryMock).execute(input)
