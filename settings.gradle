@@ -7,4 +7,7 @@ pluginManagement {
         id "${quarkusPluginId}" version "${quarkusPluginVersion}"
     }
 }
-rootProject.name='arq-ref'
+rootProject.name='clean-architecture-study'
+include("domain")
+include("usecase")
+include("infrastructure")
