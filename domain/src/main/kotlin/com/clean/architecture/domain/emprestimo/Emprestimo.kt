@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.domain.emprestimo.entity
+package com.clean.architecture.domain.emprestimo
 
 import java.util.Date
 

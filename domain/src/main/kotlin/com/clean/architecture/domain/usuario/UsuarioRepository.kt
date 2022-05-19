@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.domain.usuario
+package com.clean.architecture.domain.usuario
 
 import com.clean.architecture.domain.domain.usuario.entity.Usuario
 

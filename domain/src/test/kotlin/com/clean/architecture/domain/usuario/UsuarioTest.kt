@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.domain.usuario.entity
+package com.clean.architecture.domain.usuario
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
