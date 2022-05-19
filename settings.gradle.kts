@@ -10,3 +10,6 @@ pluginManagement {
     }
 }
 rootProject.name="clean-architecture-study"
+include("domain")
+include("application")
+include("infrastructure")

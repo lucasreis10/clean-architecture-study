@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     testImplementation("org.assertj:assertj-core:3.22.0")
+    testImplementation("org.assertj:assertj-core:3.22.0")
     testImplementation(kotlin("test"))
 }
 
@@ -23,3 +24,5 @@ tasks.test {
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+tasks.register("prepareKotlinBuildScriptModel"){}
