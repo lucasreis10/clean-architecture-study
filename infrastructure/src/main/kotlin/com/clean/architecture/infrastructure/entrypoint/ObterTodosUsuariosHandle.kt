@@ -25,6 +25,7 @@ class ObterTodosUsuariosHandle(private val obterUsuarioUseCase: ObterUsuario) {
 
     private fun response(output: OutputUsuarioDto?) =
         APIGatewayProxyResponseEvent().apply {
+            body = output.toString()
             statusCode = 200
             headers = mapOf("Content-Type" to "application/json")
         }

@@ -18,13 +18,11 @@ object ObterUsuarioTestHelper {
 
 class UsuarioRepositoryMock: UsuarioRepository {
     override fun obterUsuario(matricula: String, nome: String): Usuario {
-        return Usuario(
-            "12345",
+        return Usuario.newUsuario(
             "Lucas",
             "lucas@email.com",
             "Avenida 3 lote 2 casa 1",
             "(61) 3331-3992",
-            emptyList()
         )
     }
 
