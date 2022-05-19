@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.usuario.repository.dynamodb
+package com.clean.architecture.infrastructure.repository
 
 import software.amazon.awssdk.enhanced.dynamodb.Key
 
@@ -10,7 +10,7 @@ class UsuarioId {
 
         fun criarChave(pk: String, sk: String): Key {
             return Key.builder()
-                .partitionValue(prefixo+pk)
+                .partitionValue(prefixo +pk)
                 .sortValue(sk)
                 .build()
         }

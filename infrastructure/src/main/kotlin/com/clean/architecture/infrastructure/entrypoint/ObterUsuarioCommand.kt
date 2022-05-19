@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.usuario.entrypoint.lambda
+package com.clean.architecture.infrastructure.entrypoint
 
 import kotlinx.serialization.Serializable
 

@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.usuario.entrypoint.lambda
+package com.clean.architecture.infrastructure.entrypoint
 
 import com.amazonaws.services.lambda.runtime.Context
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent

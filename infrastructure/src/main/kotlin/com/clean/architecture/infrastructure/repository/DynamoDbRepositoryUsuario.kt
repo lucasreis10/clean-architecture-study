@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.usuario.repository.dynamodb
+package com.clean.architecture.infrastructure.repository
 
 import com.clean.architecture.domain.domain.usuario.UsuarioRepository
 import com.clean.architecture.domain.domain.usuario.entity.Usuario

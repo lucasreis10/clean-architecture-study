@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure.usuario.repository.dynamodb
+package com.clean.architecture.infrastructure.repository
 
 import com.clean.architecture.domain.domain.usuario.entity.Usuario
 import com.clean.architecture.domain.infrastructure.emprestimo.dynamodb.EmprestimoModelConverter
