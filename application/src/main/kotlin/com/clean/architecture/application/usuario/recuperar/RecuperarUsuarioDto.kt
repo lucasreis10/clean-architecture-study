@@ -1,4 +1,4 @@
-package com.clean.architecture.application.usuario.obter
+package com.clean.architecture.application.usuario.recuperar
 
 data class InputObterUsuarioDto(
     val matricula: String,
