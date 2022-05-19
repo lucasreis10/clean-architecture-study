@@ -22,6 +22,7 @@ dependencies {
     implementation("io.quarkiverse.amazonservices:quarkus-amazon-dynamodb")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
+    implementation("software.amazon.awssdk:dynamodb-enhanced:2.17.192")
     testImplementation("io.quarkus:quarkus-junit5")
 }
 
