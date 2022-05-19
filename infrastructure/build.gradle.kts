@@ -1,12 +1,23 @@
 plugins {
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.allopen") version "1.6.21"
+    kotlin("plugin.serialization") version "1.6.21"
     id("io.quarkus")
 }
 
 repositories {
     mavenCentral()
     mavenLocal()
+}
+
+buildscript {
+    repositories { mavenCentral() }
+
+    dependencies {
+        val kotlinVersion = "1.6.21"
+        classpath(kotlin("gradle-plugin", version = kotlinVersion))
+        classpath(kotlin("serialization", version = kotlinVersion))
+    }
 }
 
 val quarkusPlatformGroupId: String by project
@@ -25,6 +36,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
     implementation("software.amazon.awssdk:dynamodb-enhanced:2.17.192")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
     testImplementation("org.testcontainers:testcontainers:1.17.1")
     testImplementation("io.quarkus:quarkus-junit5")
 }

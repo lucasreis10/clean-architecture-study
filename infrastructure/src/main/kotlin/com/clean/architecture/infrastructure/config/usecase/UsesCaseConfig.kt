@@ -1,11 +1,11 @@
 package com.clean.architecture.infrastructure.config.usecase
 
-import com.lucasreis10.arq.ref.infrastructure.usuario.repository.dynamodb.DynamoDbRepositoryUsuario
-import com.lucasreis10.arq.ref.usecase.usuario.obter.ObterUsuario
+import com.clean.architecture.application.usuario.ObterUsuario
+import com.clean.architecture.infrastructure.repository.dynamodb.usuario.DynamoDbRepositoryUsuario
 import javax.enterprise.context.ApplicationScoped
 import javax.enterprise.inject.Default
+import javax.enterprise.inject.Produces
 import javax.inject.Inject
-import javax.ws.rs.Produces
 
 
 class UsesCaseConfig() {

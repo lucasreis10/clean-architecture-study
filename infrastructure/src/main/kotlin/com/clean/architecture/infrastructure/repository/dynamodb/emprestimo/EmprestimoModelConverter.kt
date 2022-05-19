@@ -1,14 +1,14 @@
 package com.clean.architecture.infrastructure.repository.dynamodb.emprestimo
 
-import com.clean.architecture.domain.domain.emprestimo.entity.Emprestimo
+import com.clean.architecture.domain.emprestimo.Emprestimo
 import javax.enterprise.context.ApplicationScoped
 
 @ApplicationScoped
 class EmprestimoModelConverter {
 
-    fun converterParaEntidade(emprestimoModel: EmprestimoModel?): com.clean.architecture.domain.domain.emprestimo.entity.Emprestimo? {
+    fun converterParaEntidade(emprestimoModel: EmprestimoModel?): Emprestimo? {
         return if(emprestimoModel != null)
-            com.clean.architecture.domain.domain.emprestimo.entity.Emprestimo(
+            Emprestimo(
                 emprestimoModel.codigo,
                 emprestimoModel.dataHora,
                 emprestimoModel.dataDevolucao
@@ -17,7 +17,7 @@ class EmprestimoModelConverter {
             null
     }
 
-    fun converterParaEntidade(lista: List<EmprestimoModel>): List<com.clean.architecture.domain.domain.emprestimo.entity.Emprestimo> {
+    fun converterParaEntidade(lista: List<EmprestimoModel>): List<Emprestimo> {
         return lista.map { converterParaEntidade(it)!! }
     }
 }

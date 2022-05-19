@@ -3,9 +3,9 @@ package com.clean.architecture.infrastructure.entrypoint
 import com.amazonaws.services.lambda.runtime.Context
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent
-import com.lucasreis10.arq.ref.usecase.usuario.obter.InputObterUsuarioDto
-import com.lucasreis10.arq.ref.usecase.usuario.obter.ObterUsuario
-import com.lucasreis10.arq.ref.usecase.usuario.obter.OutputUsuarioDto
+import com.clean.architecture.application.usuario.ObterUsuario
+import com.clean.architecture.application.usuario.obter.InputObterUsuarioDto
+import com.clean.architecture.application.usuario.obter.OutputUsuarioDto
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import javax.enterprise.context.ApplicationScoped
