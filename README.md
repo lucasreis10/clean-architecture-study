@@ -29,5 +29,5 @@ sam local start-api --template sam.jvm.yaml
 
 - Mudar estrutura do projeto de pacotes para modulos, vantagens:
     - Separa responsabilidades de forma mais organizada, contribui para "screaming architecture".
-    - Evita que camadas de alto nível tenham contato com tecnologias e acessem camadas de baixo nível.
+    - Evita que camadas de alto nível tenham contato com tecnologias de baixo nível e acessem camadas de baixo nível.
     - Isola problemas de configuração de framework na camada de mais baixo nível.
