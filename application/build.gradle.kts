@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm") version "1.6.21"
 }
 
-group = "com.clean.architecture.application"
+group = "application"
 version = "1.0-SNAPSHOT"
 
 repositories {

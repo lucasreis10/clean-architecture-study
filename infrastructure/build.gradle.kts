@@ -27,7 +27,7 @@ dependencies {
     testImplementation("io.quarkus:quarkus-junit5")
 }
 
-group = "com.example"
+group = "infrastructure"
 version = "1.0-SNAPSHOT"
 
 java {
