@@ -1,4 +1,4 @@
-package com.clean.architecture.domain.infrastructure
+package com.clean.architecture.infrastructure.infrastructure
 
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager
 import org.testcontainers.containers.GenericContainer
