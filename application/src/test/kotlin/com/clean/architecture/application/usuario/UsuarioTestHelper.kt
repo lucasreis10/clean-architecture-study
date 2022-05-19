@@ -1,8 +1,6 @@
-package com.clean.architecture.domain.usecase.usuario
+package com.clean.architecture.application.usuario
 
-import com.clean.architecture.domain.domain.usuario.UsuarioRepository
-import com.clean.architecture.domain.domain.usuario.entity.Usuario
-import com.lucasreis10.arq.ref.usecase.usuario.obter.OutputUsuarioDto
+import com.clean.architecture.application.usuario.obter.OutputUsuarioDto
 
 object ObterUsuarioTestHelper {
 
@@ -17,9 +15,9 @@ object ObterUsuarioTestHelper {
 
 }
 
-class UsuarioRepositoryMock: com.clean.architecture.domain.domain.usuario.UsuarioRepository {
-    override fun obterUsuario(matricula: String, nome: String): com.clean.architecture.domain.domain.usuario.entity.Usuario {
-        return com.clean.architecture.domain.domain.usuario.entity.Usuario(
+class UsuarioRepositoryMock: UsuarioRepository {
+    override fun obterUsuario(matricula: String, nome: String): Usuario {
+        return Usuario(
             "12345",
             "Lucas",
             "lucas@email.com",

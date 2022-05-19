@@ -1,7 +1,7 @@
-package com.clean.architecture.application.usuario.obter
+package com.clean.architecture.application.usuario
 
-import com.clean.architecture.application.usuario.UsuarioConverter
-import com.clean.architecture.application.usuario.UsuarioRepository
+import com.clean.architecture.application.usuario.obter.InputObterUsuarioDto
+import com.clean.architecture.application.usuario.obter.OutputUsuarioDto
 
 
 class ObterUsuario(private val usuarioRepository: UsuarioRepository) {

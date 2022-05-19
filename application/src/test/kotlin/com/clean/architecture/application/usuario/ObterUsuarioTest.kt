@@ -1,7 +1,7 @@
-package com.clean.architecture.domain.usecase.usuario.obter
+package com.clean.architecture.application.usuario
 
-import com.lucasreis10.arq.ref.usecase.usuario.UsuarioRepositoryMock
-import org.assertj.core.api.Assertions.*
+import com.clean.architecture.application.usuario.obter.InputObterUsuarioDto
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class ObterUsuarioTest {
