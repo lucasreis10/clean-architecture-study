@@ -3,6 +3,7 @@ package com.clean.architecture.domain.usuario
 import com.clean.architecture.domain.excepetion.DominioException
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.catchThrowable
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
 class UsuarioTest {
@@ -24,7 +25,10 @@ class UsuarioTest {
     }
 
     @Test
-    fun `quando um usuario invalido eh criado entao uma excecao deve ser apresentada`() {
+    @DisplayName("""Quando um usuário inválido é criado com 'nome' menor que 3 caracters 
+        |           Então uma exceção deve ser lançada 
+        |           """)
+    fun criarUsuarioInvalido_nomeMenorQueOPermitido() {
         // setup:
         val nome = "Gi"
         // execute:
