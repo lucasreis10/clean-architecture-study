@@ -1,11 +1,11 @@
 package com.clean.architecture.domain.usuario
 
+import com.clean.architecture.domain.Identifier
 import java.util.Objects
 import java.util.UUID
 
-class UsuarioId private constructor(
-    val id: String
-){
+class UsuarioId private constructor(id: String): Identifier() {
+
 
     init {
         Objects.nonNull(id)

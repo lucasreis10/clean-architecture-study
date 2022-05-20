@@ -1,5 +1,6 @@
 package com.clean.architecture.domain.usuario
 
+import com.clean.architecture.domain.AggregateRoot
 import com.clean.architecture.domain.excepetion.DominioException
 import java.time.Instant
 import java.time.Year
@@ -15,7 +16,7 @@ class Usuario private constructor(
     val dataCriacao: Instant,
     val dataInativacao: Instant?,
     val ativo: Boolean
-    ) {
+): AggregateRoot<UsuarioId>(id) {
 
     init {
         validar()

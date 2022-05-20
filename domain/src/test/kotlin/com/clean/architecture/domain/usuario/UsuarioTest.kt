@@ -1,7 +1,6 @@
 package com.clean.architecture.domain.usuario
 
 import com.clean.architecture.domain.excepetion.DominioException
-import org.assertj.core.api.Assertions
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.catchThrowable
 import org.junit.jupiter.api.Test
