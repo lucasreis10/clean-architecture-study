@@ -25,7 +25,7 @@ class UsuarioTest {
     }
 
     @Test
-    @DisplayName("""Quando um usuário inválido é criado com 'nome' menor que 3 caracters 
+    @DisplayName("""Dado que um usuário inválido é criado com 'nome' menor que 3 caracters 
         |           Então uma exceção deve ser lançada 
         |           """)
     fun criarUsuarioInvalido_nomeMenorQueOPermitido() {
