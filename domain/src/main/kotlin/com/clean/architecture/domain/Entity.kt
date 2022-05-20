@@ -8,4 +8,5 @@ abstract class Entity<ID: Identifier> constructor (id: ID) {
         Objects.requireNonNull(id, "'id' não pode ser nulo")
     }
 
+    abstract fun validar()
 }

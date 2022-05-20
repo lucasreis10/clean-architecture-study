@@ -22,15 +22,13 @@ class Usuario private constructor(
         validar()
     }
 
-    fun validar() {
-        if(this.nome.length <= 3) {
-            throw DominioException("Nome do usuário deve conter mais de 3 caracters")
-        }
+    override fun validar() {
+        UsuarioValidator(this).validar()
     }
+
 
     fun inativarUsuario(): Usuario {
         return Usuario(id, matricula, nome, email, endereco, telefone, dataCriacao, Instant.now(), false)
-
     }
 
     companion object {

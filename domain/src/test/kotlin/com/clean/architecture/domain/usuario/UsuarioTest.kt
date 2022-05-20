@@ -46,6 +46,7 @@ class UsuarioTest {
         // execute:
         val usuarioInativo = usuario.inativarUsuario()
         // verify:
+        assertThat(usuarioInativo.id).isEqualTo(usuario.id)
         assertThat(usuarioInativo.ativo).isFalse()
         assertThat(usuarioInativo.dataInativacao).isNotNull()
     }
