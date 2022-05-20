@@ -35,5 +35,16 @@ class UsuarioTest {
             .hasMessageContaining("Nome do usuário deve conter mais de 3 caracters")
     }
 
+    @Test
+    fun inativarUsuario() {
+        // setup:
+        val usuario = UsuarioTestHelper.usuario()
+        // execute:
+        val usuarioInativo = usuario.inativarUsuario()
+        // verify:
+        assertThat(usuarioInativo.ativo).isFalse()
+        assertThat(usuarioInativo.dataInativacao).isNotNull()
+    }
+
 
 }

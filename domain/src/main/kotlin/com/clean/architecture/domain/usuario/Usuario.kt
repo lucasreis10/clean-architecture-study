@@ -28,6 +28,11 @@ class Usuario private constructor(
         }
     }
 
+    fun inativarUsuario(): Usuario {
+        return Usuario(id, matricula, nome, email, endereco, telefone, dataCriacao, Instant.now(), false)
+
+    }
+
     companion object {
         fun newUsuario(nome: String, email: String, endereco: String, telefone: String): Usuario {
             val id = UsuarioId.gerar()
