@@ -1,10 +1,9 @@
 package com.clean.architecture.domain.usuario
 
 import com.clean.architecture.domain.AggregateRoot
-import com.clean.architecture.domain.excepetion.DominioException
 import java.time.Instant
 import java.time.Year
-import java.util.UUID
+import java.util.*
 
 class Usuario private constructor(
     val id: UsuarioId,
