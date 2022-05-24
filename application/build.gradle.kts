@@ -16,6 +16,8 @@ dependencies {
     testImplementation("org.assertj:assertj-core:3.22.0")
     testImplementation("org.assertj:assertj-core:3.22.0")
     testImplementation(kotlin("test"))
+    testImplementation("org.mockito:mockito-junit-jupiter:4.5.1")
+
 }
 
 tasks.test {
