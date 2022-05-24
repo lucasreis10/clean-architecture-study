@@ -25,9 +25,10 @@ class UsuarioTest {
     }
 
     @Test
-    @DisplayName("""Dado que um usuário inválido é criado com 'nome' menor que 3 caracters 
-        |           Então uma exceção deve ser lançada 
-        |           """)
+    @DisplayName("""
+        Dado que um usuário inválido é criado com 'nome' menor que 3 caracters 
+        Então uma exceção deve ser lançada 
+        """)
     fun criarUsuarioInvalido_nomeMenorQueOPermitido() {
         // setup:
         val nome = "Gi"

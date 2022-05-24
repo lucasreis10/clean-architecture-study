@@ -1,15 +1,16 @@
 package com.clean.architecture.application.usuario.recuperar
 
-import com.clean.architecture.application.usuario.UsuarioConverter
+import com.clean.architecture.application.UseCase
 import com.clean.architecture.domain.usuario.UsuarioRepository
 
+class RecuperarUsuario(val repository: UsuarioRepository):
+    UseCase<RecuperarUsuarioCommand, RecueperarUsuarioOutput>() {
 
-class RecuperarUsuario(private val usuarioRepository: UsuarioRepository) {
+    override fun execute(input: RecuperarUsuarioCommand): RecueperarUsuarioOutput {
+        val usuarioRecuperado = repository.obterUsuario(input.matricula, input.nome)
 
-    fun execute(input: InputObterUsuarioDto): OutputUsuarioDto? {
-        val usuario = usuarioRepository.obterUsuario(input.matricula, input.nome)
-
-        return UsuarioConverter.converterParaDto(usuario)
+        return RecueperarUsuarioOutput.from(usuarioRecuperado!!)
     }
+
 
 }
