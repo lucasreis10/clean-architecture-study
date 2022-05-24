@@ -1,7 +1,7 @@
 package com.clean.architecture.application.usuario.recuperar
 
 import com.clean.architecture.application.usuario.UsuarioConverter
-import com.clean.architecture.application.usuario.UsuarioRepository
+import com.clean.architecture.domain.usuario.UsuarioRepository
 
 
 class RecuperarUsuario(private val usuarioRepository: UsuarioRepository) {
