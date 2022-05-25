@@ -6,16 +6,17 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
+import org.mockito.ArgumentMatchers.anyString
 import org.mockito.InjectMocks
 import org.mockito.Mock
-import org.mockito.Mockito.*
+import org.mockito.Mockito.`when`
 import org.mockito.junit.jupiter.MockitoExtension
 
 @ExtendWith(MockitoExtension::class)
-class RecuperarUsuarioTest {
+class RecuperarUsuarioUseCaseTest {
 
     @Mock
-    lateinit var repository: UsuarioGateway
+    lateinit var usuarioGateway: UsuarioGateway
     @InjectMocks
     lateinit var recuperarUsuarioUseCase: DefaultRecuperarUsuario
 
@@ -31,7 +32,7 @@ class RecuperarUsuarioTest {
         val matricula = "12345"
         val nome = "Marta"
         val inputCommand = RecuperarUsuarioCommand(matricula, nome)
-        `when`(repository.obterUsuario(anyString(), anyString())).thenReturn(Usuario.newUsuario(nome, "dummyEmail", "dummyEndereco", "dummyTelefone"))
+        `when`(usuarioGateway.obterUsuario(anyString(), anyString())).thenReturn(Usuario.newUsuario(nome, "dummyEmail", "dummyEndereco", "dummyTelefone"))
         // execute:
         val output = recuperarUsuarioUseCase.execute(inputCommand)
         // verify:
@@ -53,7 +54,7 @@ class RecuperarUsuarioTest {
         val matricula = "0000"
         val nome = "Dummy"
         val inputCommand = RecuperarUsuarioCommand(matricula, nome)
-        `when`(repository.obterUsuario(anyString(), anyString())).thenReturn(null)
+        `when`(usuarioGateway.obterUsuario(anyString(), anyString())).thenReturn(null)
         // execute:
         val output = recuperarUsuarioUseCase.execute(inputCommand)
         // verify:
