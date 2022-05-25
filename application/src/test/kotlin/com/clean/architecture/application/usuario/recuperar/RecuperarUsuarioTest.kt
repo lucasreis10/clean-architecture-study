@@ -2,7 +2,7 @@ package com.clean.architecture.application.usuario.recuperar
 
 import com.clean.architecture.domain.usuario.Usuario
 import com.clean.architecture.domain.usuario.UsuarioRepository
-import org.assertj.core.api.Assertions.*
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
@@ -24,7 +24,7 @@ class RecuperarUsuarioTest {
         val repository = mock(UsuarioRepository::class.java)
         `when`(repository.obterUsuario(anyString(), anyString())).thenReturn(Usuario.newUsuario(nome, "dummyEmail", "dummyEndereco", "dummyTelefone"))
         // execute:
-        val output = RecuperarUsuario(repository).execute(inputCommand)
+        val output = DefaultRecuperarUsuario(repository).execute(inputCommand)
         // verify:
         assertThat(output!!.nome).isEqualTo(nome)
         assertThat(output.matricula).isNotNull()
@@ -46,7 +46,7 @@ class RecuperarUsuarioTest {
         val repository = mock(UsuarioRepository::class.java)
         `when`(repository.obterUsuario(anyString(), anyString())).thenReturn(null)
         // execute:
-        val output = RecuperarUsuario(repository).execute(inputCommand)
+        val output = DefaultRecuperarUsuario(repository).execute(inputCommand)
         // verify:
         assertThat(output).isNull()
     }

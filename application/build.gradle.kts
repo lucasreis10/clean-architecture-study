@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     implementation(project(":domain"))
+
     testImplementation(kotlin("test"))
     testImplementation("org.assertj:assertj-core:3.22.0")
     testImplementation("org.mockito:mockito-junit-jupiter:4.5.1")

@@ -3,7 +3,7 @@ package com.clean.architecture.infrastructure.entrypoint
 import com.amazonaws.services.lambda.runtime.Context
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent
-import com.clean.architecture.application.usuario.recuperar.RecuperarUsuario
+import com.clean.architecture.application.usuario.recuperar.RecuperarUsuarioUseCase
 import com.clean.architecture.application.usuario.recuperar.InputObterUsuarioDto
 import com.clean.architecture.application.usuario.recuperar.OutputUsuarioDto
 import kotlinx.serialization.decodeFromString
@@ -12,7 +12,7 @@ import javax.enterprise.context.ApplicationScoped
 
 
 @ApplicationScoped
-class ObterTodosUsuariosHandle(private val obterUsuarioUseCase: RecuperarUsuario) {
+class ObterTodosUsuariosHandle(private val obterUsuarioUseCase: RecuperarUsuarioUseCase) {
 
     fun execute(event: APIGatewayProxyRequestEvent, context: Context): APIGatewayProxyResponseEvent {
         val command = converterRequestParaObjeto(event)
