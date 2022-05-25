@@ -1,7 +1,7 @@
 package com.clean.architecture.application.usuario.recuperar
 
 import com.clean.architecture.domain.usuario.Usuario
-import com.clean.architecture.domain.usuario.UsuarioRepository
+import com.clean.architecture.domain.usuario.UsuarioGateway
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -15,7 +15,7 @@ import org.mockito.junit.jupiter.MockitoExtension
 class RecuperarUsuarioTest {
 
     @Mock
-    lateinit var repository: UsuarioRepository
+    lateinit var repository: UsuarioGateway
     @InjectMocks
     lateinit var recuperarUsuarioUseCase: DefaultRecuperarUsuario
 

@@ -1,7 +1,7 @@
 package com.clean.architecture.domain.usuario
 
 
-interface UsuarioRepository {
+interface UsuarioGateway {
 
     fun criarUsuario(usuario: Usuario): Usuario
 
