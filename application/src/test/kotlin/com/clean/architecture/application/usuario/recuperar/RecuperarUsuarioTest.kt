@@ -5,9 +5,19 @@ import com.clean.architecture.domain.usuario.UsuarioRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.mockito.InjectMocks
+import org.mockito.Mock
 import org.mockito.Mockito.*
+import org.mockito.junit.jupiter.MockitoExtension
 
+@ExtendWith(MockitoExtension::class)
 class RecuperarUsuarioTest {
+
+    @Mock
+    lateinit var repository: UsuarioRepository
+    @InjectMocks
+    lateinit var recuperarUsuarioUseCase: DefaultRecuperarUsuario
 
 
     @Test
@@ -21,16 +31,16 @@ class RecuperarUsuarioTest {
         val matricula = "12345"
         val nome = "Marta"
         val inputCommand = RecuperarUsuarioCommand(matricula, nome)
-        val repository = mock(UsuarioRepository::class.java)
         `when`(repository.obterUsuario(anyString(), anyString())).thenReturn(Usuario.newUsuario(nome, "dummyEmail", "dummyEndereco", "dummyTelefone"))
         // execute:
-        val output = DefaultRecuperarUsuario(repository).execute(inputCommand)
+        val output = recuperarUsuarioUseCase.execute(inputCommand)
         // verify:
         assertThat(output!!.nome).isEqualTo(nome)
         assertThat(output.matricula).isNotNull()
         assertThat(output.email).isNotNull()
         assertThat(output.id).isNotNull()
     }
+
 
     @Test
     @DisplayName("""
@@ -43,10 +53,9 @@ class RecuperarUsuarioTest {
         val matricula = "0000"
         val nome = "Dummy"
         val inputCommand = RecuperarUsuarioCommand(matricula, nome)
-        val repository = mock(UsuarioRepository::class.java)
         `when`(repository.obterUsuario(anyString(), anyString())).thenReturn(null)
         // execute:
-        val output = DefaultRecuperarUsuario(repository).execute(inputCommand)
+        val output = recuperarUsuarioUseCase.execute(inputCommand)
         // verify:
         assertThat(output).isNull()
     }
