@@ -10,11 +10,16 @@ class UsuarioTest {
 
 
     @Test
+    @DisplayName("""
+        Dado parametros válidos para criar um usuário
+        Quando o criar usário é chamado
+        Então um usuário com ID deve ser retornado.
+    """)
     fun criarUsuarioValido() {
         // setup:
         val nome = "Marta"
         // execute:
-        val novoUsuario = UsuarioTestHelper.usuario(nome = nome)
+        val novoUsuario = Usuario.newUsuario(nome, "dummyEmail", "dummyEndereco", "dummyTelefone")
         // verify
         assertThat(novoUsuario.nome).isEqualTo(nome)
         assertThat(novoUsuario.id).isNotNull()
@@ -27,6 +32,7 @@ class UsuarioTest {
     @Test
     @DisplayName("""
         Dado que um usuário inválido é criado com 'nome' menor que 3 caracters 
+        Quando o criar usário é chamado
         Então uma exceção deve ser lançada 
         """)
     fun criarUsuarioInvalido_nomeMenorQueOPermitido() {
@@ -41,6 +47,11 @@ class UsuarioTest {
     }
 
     @Test
+    @DisplayName("""
+        Dado que um usuário ativo 
+        Quando o inativar usuário é chamado
+        Então um usuário inativo é retornado. 
+        """)
     fun inativarUsuario() {
         // setup:
         val usuario = UsuarioTestHelper.usuario()

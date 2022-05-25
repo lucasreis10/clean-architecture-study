@@ -12,6 +12,7 @@ import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.junit.jupiter.MockitoExtension
 
+
 @ExtendWith(MockitoExtension::class)
 class RecuperarUsuarioUseCaseTest {
 

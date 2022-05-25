@@ -8,8 +8,6 @@ class DefaultCriarUsuarioUseCase(val usuarioGateway: UsuarioGateway): CriarUsuar
     override fun execute(input: CriarUsuarioCommand): CriarUsuarioOutput {
         val usuario = Usuario.newUsuario(input.nome, input.email, input.endereco, input.telefone)
 
-        usuario.validar()
-
         return CriarUsuarioOutput.from(usuarioGateway.criarUsuario(usuario))
     }
 }
