@@ -31,3 +31,4 @@ sam local start-api --template sam.jvm.yaml
     - Separa responsabilidades de forma mais organizada, contribui para "screaming architecture".
     - Evita que camadas de alto nível tenham contato com tecnologias de baixo nível e acessem camadas de baixo nível.
     - Isola problemas de configuração de framework na camada de mais baixo nível.
+- Pattern usado na camada <i>domain</i> [Gateway Pattern](https://martinfowler.com/articles/gateway-pattern.html)
