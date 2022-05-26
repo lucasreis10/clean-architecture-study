@@ -37,6 +37,7 @@ dependencies {
     implementation("io.quarkus:quarkus-arc")
     implementation("software.amazon.awssdk:dynamodb-enhanced:2.17.192")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
+    implementation("io.quarkus:quarkus-config-yaml")
     testImplementation("org.testcontainers:testcontainers:1.17.1")
     testImplementation("io.quarkus:quarkus-junit5")
 }
