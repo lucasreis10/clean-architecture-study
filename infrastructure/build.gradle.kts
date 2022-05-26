@@ -27,10 +27,17 @@ dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:quarkus-amazon-services-bom:${quarkusPlatformVersion}"))
     implementation(project(":domain"))
     implementation(project(":application"))
+
+    // Quarkus:
     implementation("io.quarkus:quarkus-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-config-yaml")
+
+    // AWS:
+    implementation("software.amazon.awssdk:dynamodb-enhanced:2.17.198")
+
+    // Testes:
     testImplementation("io.quarkus:quarkus-junit5")
 }
 
