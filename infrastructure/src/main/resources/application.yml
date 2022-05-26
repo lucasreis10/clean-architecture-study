@@ -1,0 +1,6 @@
+aws:
+  region: ${REGION}
+  dynamodb:
+    endpoint: ${URL_DYNAMODB}
+
+
