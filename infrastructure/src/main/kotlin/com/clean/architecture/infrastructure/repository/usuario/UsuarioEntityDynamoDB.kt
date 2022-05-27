@@ -34,4 +34,17 @@ class UsuarioEntityDynamoDB(
         }
     }
 
+    fun mutate(): Usuario {
+        return Usuario.with(
+            id,
+            matricula,
+            nome,
+            email,
+            endereco,
+            telefone,
+            dataCriacao,
+            dataInativacao,
+            ativo
+        )
+    }
 }

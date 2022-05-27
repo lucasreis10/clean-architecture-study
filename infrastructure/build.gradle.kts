@@ -39,6 +39,7 @@ dependencies {
 
     // Testes:
     testImplementation("io.quarkus:quarkus-junit5")
+    testImplementation("org.assertj:assertj-core:3.22.0")
     testImplementation("org.testcontainers:testcontainers:1.17.2")
 
 }

@@ -44,6 +44,30 @@ class Usuario private constructor(
 
             return "$anoAtual-$uuid"
         }
+
+        fun with(
+            id: String,
+            matricula: String,
+            nome: String,
+            email: String,
+            endereco: String,
+            telefone: String,
+            dataCriacao: Instant,
+            dataInativacao: Instant?,
+            ativo: Boolean
+        ): Usuario {
+            return Usuario(
+                UsuarioId.from(id),
+                matricula,
+                nome,
+                email,
+                endereco,
+                telefone,
+                dataCriacao,
+                dataInativacao,
+                ativo
+            )
+        }
     }
 
 }
