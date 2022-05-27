@@ -1,4 +1,5 @@
 aws:
   region: eu-central-1
+  accesskey: fake-key
   dynamodb:
     endpoint: http://localhost:8000

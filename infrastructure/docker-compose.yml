@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  dynamodb-local:
+  dynamodb:
     command: "-jar DynamoDBLocal.jar -inMemory -sharedDb"
     image: "amazon/dynamodb-local:1.11.477"
     container_name: dynamodb-local
