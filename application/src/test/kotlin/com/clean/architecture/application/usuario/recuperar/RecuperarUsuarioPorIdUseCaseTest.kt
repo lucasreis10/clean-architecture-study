@@ -42,4 +42,22 @@ class RecuperarUsuarioPorIdUseCaseTest {
         assertThat(output.matricula).isNotNull()
     }
 
+    @Test
+    @DisplayName("""
+        Dado parametro ID de usuário inválido
+        Quando recuperarUsuarioPorId for executado
+        Então valor null é retornado.
+    """)
+    fun recuperarUsuario_naoExistente() {
+        // setup:
+        val usuarioId = "dummyId"
+        val command = RecuperarUsuarioPorIdCommand(usuarioId)
+        `when`(usuarioGateway.obterUsuario(anyString())).thenReturn(null)
+        // execute:
+        val output = recuperarUsuarioPorIdUseCase.execute(command)
+        // verify:
+        assertThat(output).isNull()
+    }
+
+
 }

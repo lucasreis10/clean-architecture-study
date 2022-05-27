@@ -7,4 +7,6 @@ interface UsuarioGateway {
 
     fun obterUsuario(matricula: String, nome: String): Usuario?
 
+    fun obterUsuario(uuid: String): Usuario?
+
 }
