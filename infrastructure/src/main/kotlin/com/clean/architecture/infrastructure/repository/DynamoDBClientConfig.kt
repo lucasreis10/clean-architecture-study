@@ -1,4 +1,4 @@
-package com.clean.architecture.infrastructure.repository.usuario
+package com.clean.architecture.infrastructure.repository
 
 import org.eclipse.microprofile.config.inject.ConfigProperty
 import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider
