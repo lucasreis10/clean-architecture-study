@@ -17,15 +17,12 @@ class UsuarioGatewayDynamoDBTest {
     @Inject
     lateinit var usuarioGatewayDynamoDB: UsuarioGatewayDynamoDB
 
-    @Test
     @DisplayName("""
         Dado um usuário com parametros válidos
         Quando criar usuário for chmado
         Então um usuário novo será criado na tabela do DynamoDB
     """)
     fun criarUsuario() {
-        // setup:
-        assertThat(usuarioGatewayDynamoDB).isNotNull()
     }
 
 }
