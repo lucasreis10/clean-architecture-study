@@ -16,7 +16,7 @@ Composta por frameworks e ferramentas como o Banco de Dados, o Web Framework, et
 ## Testar com SAM local
 Inicie DynamoDB local
 ```shell
-TODO configurar dynamodb-local 
+docker-compose up
 ```
 Iniciar API local
 ```shell
